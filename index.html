@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InsCatGram con Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b232dfea0e.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i class="fa-brands fa-instagram"></i>
+          InsCatGram
+        </a>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <!-- MODAL BUTTON -->
+          <button class="btn btn-success me-md-2 create-new-post" type="button" data-bs-toggle="modal" data-bs-target="#postModal">
+            Create a new post
+          </button>
+          <!-- MODAL BUTTON END -->
+          <!-- DROPDOWN -->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accessibility</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+            </ul>
+            <!-- DROPDOWN END -->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+        <!-- MODAL -->
+        <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="postModalLabel">Create a new post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <!-- CAJA DE TEXTO -->
+                <form>
+                  <div class="mb-3">
+                    <label for="captionText" class="form-label">Caption:</label>
+                    <textarea class="form-control" id="captionText" rows="3" placeholder="Add the caption of your post here"></textarea>
+                  </div>
+                  <!-- BOTONES FOTO Y UBICACION -->
+                  <div class="d-flex">
+                    <button type="button" class="btn btn-outline-secondary me-2">
+                      <i class="fa-solid fa-camera"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- MODAL END --> 
+    <!-- GRID -->
+    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+        <div class="container text-center">
+          <div class="row">
+            <div class="d-flex justify-content-center col-lg-4 col-md-6 col-sm-12 mt-3">
+              <img src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-64206,resizemode-75,msid-113311534/news/new-updates/springfield-ohio-becomes-meme-central-as-donald-trumps-debunked-pet-eating-claim-fuels-simpsons-parodies.jpg" class="img-fluid mt-3" alt="...">
+            </div>
+              <div class="d-flex justify-content-center col-lg-4 col-md-6 col-sm-12 mt-3">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt8hr5WpfraieKv229HolUuOhAqNv9UEctdTA3_TaygZx2Hkvo3qq5jK_hwNMSUffJwXs&usqp=CAU" class="img-fluid mt-3" alt="...">
+            </div> 
+              <div class="d-flex justify-content-center col-lg-4 col-md-6 col-sm-12 mt-3">
+              <img src="https://i.etsystatic.com/47323181/r/il/a06948/6272155860/il_fullxfull.6272155860_ri3c.jpg" class="img-fluid mt-3" alt="...">
+            </div>
+            <div class="d-flex justify-content-center col-lg-4 col-md-6 col-sm-12 mt-3">
+              <img src="https://i.pinimg.com/originals/79/86/ef/7986ef38f2eff96a9e7fc709eddbdbee.jpg" class="img-fluid mt-3" alt="...">
+            </div>  
+              <div class="d-flex justify-content-center col-lg-4 col-md-6 col-sm-12 mt-3">
+              <img src="https://pics.craiyon.com/2023-10-05/9f15ce22b7ad4c4398d4f3f8452d4dd8.webp" class="img-fluid mt-3" alt="...">
+            </div> 
+              <div class="d-flex justify-content-center col-lg-4 col-md-6 col-sm-12 mt-3">
+              <img src="https://media.wired.com/photos/65e8810cb8b2544099643c72/1:1/w_1888,h_1888,c_limit/dsadas.jpg" class="img-fluid mt-3" alt="...">
+            </div>
+            <div class="d-flex justify-content-center col-lg-4 col-md-6 col-sm-12 mt-3">
+              <img src="https://as1.ftcdn.net/v2/jpg/04/34/12/28/1000_F_434122857_YuN82HHQYqnApWcG4jN8W16vGgcIk6k8.jpg" class="img-fluid mt-3" alt="...">
+            </div>
+            <div class="d-flex justify-content-center col-lg-4 col-md-6 col-sm-12 mt-3">
+              <img src="https://i.seadn.io/gae/bcGi2udRZ6eBxrNylxBIHuPVonxlk01TkGtkJ9MONd7TdgCuF2rqDNAlNEnlwH49ob0c786YCSvgMsxGLHngTqHZDX4ucedXuqsi?auto=format&dpr=1&w=1000" class="img-fluid mt-3" alt="...">
+            </div>
+            <div class="d-flex justify-content-center col-lg-4 col-md-6 col-sm-12 mt-3">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTza0wFiHVfH9sJQaCDKNlES4gRoT3tq41NBQ&s" class="img-fluid mt-3" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- GRID END -->
+       <!-- FEED -->
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        <!-- FIRST POST -->
+     <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          
+        </div>
+        <div class="row my-4">
+          <div class="col-6 mx-auto border rounded p-0">
+              <div class="d-flex p-2">
+                  <div class="w-100 fs-4 text-start">THE OBSERVER</div>
+                  <small>05/10/2024</small>
+              </div>
+              <img style="object-fit: cover;" src="https://static.abc.es/media/sociedad/2017/08/08/gato-feo-mojada-k2KB--1240x698@abc.jpg" class="img-fluid w-100 col-12" alt=""/>
+              <div class="p-2 text-start">
+                  <i class="fa-solid fa-heart"></i> &nbsp; <strong>209.658 likes</strong>
+                  <p>Misifú fué uno de los siete gatos videntes de la historia antigua. Cuenta la leyenda que vió más allá de su propia comprensión cuando aquella pluma voladora estaba sujeta a un palo, el cual era movido por un humano. Aquél descubrimiento acabó con los vestigios de cordura que le quedaban.</p>
+              </div>
+          </div>
+      </div>
+     <!-- END FIRST POST -->
+
+     <!-- SECOND POST -->
+     <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          
+        </div>
+        <div class="row my-4">
+          <div class="col-6 mx-auto border rounded p-0">
+              <div class="d-flex p-2">
+                  <div class="w-100 fs-4 text-start">DON FRUMENCIO</div>
+                  <small>05/10/2024</small>
+              </div>
+              <img style="object-fit: cover;" src="https://cdn.wamiz.fr/cdn-cgi/image/format=auto,quality=80,width=1200,height=900,fit=cover/article/main-picture/5c5328bde77a3957455947.jpg" class="img-fluid w-100 col-12" alt=""/>
+              <div class="p-2 text-start">
+                  <i class="fa-solid fa-heart"></i> &nbsp; <strong>209.658 likes</strong>
+                  <p>Don Frumencio era un gato de pueblo feliz, hasta que un día, persiguiendo a una rata, acabó estrellándose contra un alcornoque. Don Frumencio pasa sus días observando turistas que huyen del bullicio de la capital, incomodándolos con su intensa mirada.</p>
+              </div>
+          </div>
+      </div>
+     <!-- END OF SECOND POST -->
+
+     <!-- THIRD POST -->
+     <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          
+        </div>
+        <div class="row my-4">
+          <div class="col-6 mx-auto border rounded p-0">
+              <div class="d-flex p-2">
+                  <div class="w-100 fs-4 text-start">GATTOBY</div>
+                  <small>24/12/2023</small>
+              </div>
+              <img style="object-fit: cover;" src="https://upload.wikimedia.org/wikipedia/commons/4/46/Zuri.jpg" class="img-fluid w-100 col-12" alt=""/>
+              <div class="p-2 text-start">
+                  <i class="fa-solid fa-heart"></i> &nbsp; <strong>209.658 likes</strong>
+                  <p>Gattoby no necesita que le regalen un calcetín para alcanzar su libertad. De hecho, por mas que intentes librarte de Gattoby, siempre estará allí, abanicándote intensamente con sus tremendos orejones.</p>
+              </div>
+          </div>
+      </div>
+     <!-- END OF THIRD POST -->
+      <!-- FEED END -->
+
+      </div>
+    </div>
+    <!-- SCRIPT DE BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
